@@ -1,0 +1,390 @@
+
+/*estilo geral*/
+*{  
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: #000000;
+    height: 100vh; 
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+section {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeInUp 1s forwards;
+    animation-delay: 0.3s;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.interface{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+.flex{
+    display: flex;
+}
+.btn-contato button {
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #d2cccb;
+    border: #aca8a8;
+    border-radius: 30px;
+    cursor: pointer;
+    color: #000000;
+    transition: .2s;
+}
+
+button:hover, form .btn-enviar input:hover {
+    box-shadow: 0px 0px 8px #860000 ;
+    transform: scale(1.05);
+    transition: .2s;
+}
+
+/* ESTILO DO CABEÇALHO */
+header{
+    padding: 40px 4%;
+}
+
+header > .interface{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+header a{
+    text-decoration: none;
+    color: #ffffff;;
+    display: inline-block;
+    transition: .2s;
+}
+
+header a:hover{
+    color: #860000;;
+    transform: scale(1.05);
+}
+
+header nav ul li{
+    display: inline-block;
+    padding: 40px;
+    margin: 40px;
+}
+
+
+
+
+/*ESTILO DO TOPO DO SITE*/
+section.topo-do-site{
+    padding: 40px 4%;
+}
+section.topo-do-site.flex{
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+}
+.topo-do-site h1{
+    color: #ffffff;;
+    font-size: 42px;
+    line-height: 40px;
+
+}
+.topo-do-site h1 span{
+    color: #860000;
+
+}
+
+.topo-do-site .txt-topo-site p{
+    color: #ffffff;
+    margin: 40px 0;
+}
+
+.topo-do-site .txt-topo-site ul{
+    color: #ffffff;
+    margin: 40px 0;
+    text-align: justify;
+    margin: 20px 0;
+    text-indent: 5px 2%;
+}
+
+.topo-do-site .img-topo-do-site img{
+    position: relative;
+    animation: flutuar 2s ease-in-out infinite alternate;
+
+}
+
+@keyframes flutuar{
+    0%{
+        top: 0;
+    }
+    100%{
+        top: 30px;
+    }
+}
+.especialidades {
+    padding: 80px 4%;
+}
+
+.especialidades .titulo {
+    color: #ffffff;
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+.especialidades .titulo span {
+    color: #860000; /* verde neon */
+}
+
+.especialidades .flex {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.especialidades-box {
+    background-color:#000000;
+    border-radius: 20px;
+    padding: 40px;
+    flex: 1;
+    text-align: center;
+    color: rgb(110, 48, 48);
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.1);
+    transition: 0.3s ease-in-out;
+}
+
+.especialidades-box:hover {
+    box-shadow: 0 0 10px #860000;
+    transform: scale(1.05);
+}
+
+.icon-especialidade {
+    width: 60px;
+    margin-bottom: 20px;
+}
+
+.especialidades-box h3 {
+    color: white;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.especialidades-box p {
+    color: #cfcfcf;
+    font-size: 14px;
+}
+
+
+
+section.sobre{
+    padding: 80px 4%;
+}
+
+section.sobre .flex{
+    align-items: center;
+    gap: 60px;
+}
+
+.sobre .txt-sobre{
+    color:#ffffff;
+
+}
+
+.sobre .txt-sobre h2{
+    font-size: 40px;
+    line-height: 40px;
+    margin-bottom: 30px;
+}
+
+.sobre .txt-sobre h2 span{
+    color: #860000;
+    display: block;
+
+}
+
+.sobre .txt-sobre p{
+    margin: 20px 0;
+    text-align: justify;
+
+}
+
+.img-sobre img {
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    height: auto;
+}
+
+ .btn-social button{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border:  none;
+    background-color: #888888;
+    font-size: 22px;
+    cursor: pointer;
+    margin: 0 5%;
+    gap: 40px;
+}
+
+/* ESTILO PORTFOLIO */
+
+section.portfolio{
+    padding: 80px 4%;
+    box-shadow: 0 0 40px 10px #860000
+}
+
+section.portfolio .flex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px; /* espaçamento entre as imagens */
+    display: grid;
+    justify-items: center;
+}
+
+.grid-port {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  justify-items: center;
+}
+
+.img-port img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 0%;
+  box-shadow: 0 0 8px #860000;
+  transition: transform 0.3s ease;
+  object-fit: contain;
+}
+
+.img-port img:hover {
+  transform: scale(1.03);
+}
+
+.portfolio .titulo{
+    color: #ffffff; 
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+.portfolio .titulo span{
+    color: #860000;
+
+}
+
+
+
+/*estilo FORMULARIO*/
+.formulario .titulo{
+    color: #ffffff; 
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+.formulario .titulo span{
+    color: #bbeb89;
+
+}
+
+section.formulario{
+    padding: 80px 4%;
+}
+
+form{
+    max-width: 500px;
+    margin:0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+form input, form textarea{
+    width: 100%;
+    background-color: #0c46328c;
+    border: none;
+    outline: 0;
+    padding: 20px 15px;
+    border-radius: 15px;
+    color: #000000;
+    font-size: 18px;
+}
+
+form textarea{
+    resize: none;
+    max-height: 500px;
+}
+
+form .btn-enviar{
+    margin-top: 20px;
+    text-align: center;
+
+}
+
+form .btn-enviar input{
+    width: 120px;
+    background-color: #bbeb89;
+    color: #0c4632;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 2s;
+
+}
+/* estilo do rodapé */
+footer{
+    padding: 60px 4%;
+    box-shadow: 0 0 40px 10px #00000062;
+
+}
+
+footer .flex{
+    justify-content: space-between;
+
+}
+
+footer .line-footer{
+    padding: 20px 0;
+    border-bottom: 2px solid #000000;
+    text-align: center;
+    margin-top: 20px;
+}
+
+footer .line-footer p i{
+    color: #000000;
+    font-size: 22px;
+    gap: 5px;
+}
+
+footer .line-footer p a{
+    color: #000000;
+}
+@media screen and (max-width: 1020px){
+    .flex{
+        flex-direction: column;
+    }
+
+    /*!CABEÇALHO*/
+    .menu-desktop, .btn-contato{
+        display: none;
+    }
+}
+
+/* ESTILO PORTFOLIO */
